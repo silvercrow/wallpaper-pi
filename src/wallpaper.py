@@ -24,7 +24,7 @@ print(gamepad)
 selfieStickBtn = 115
 
 def printWallpaper():
-    wallpaper = 'wallpaper-'+str(random.randint(1,4))
+    wallpaper = 'wallpaper-'+str(random.randint(1,4))+'.jpg'
     epd = epd2in13_V2.EPD()
     logging.info("init and Clear")
     epd.init(epd.FULL_UPDATE)
