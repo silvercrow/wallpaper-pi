@@ -1,6 +1,7 @@
 from evdev import InputDevice, categorize, ecodes
 import sys
 import os
+import random
 wallpaperDir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'wallpapers')
 libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
 if os.path.exists(libdir):
@@ -23,9 +24,7 @@ print(gamepad)
 selfieStickBtn = 115
 
 def printWallpaper():
-
-
-    
+    wallpaper = 'wallpaper-'+random.randint(1,4)
     epd = epd2in13_V2.EPD()
     logging.info("init and Clear")
     epd.init(epd.FULL_UPDATE)
