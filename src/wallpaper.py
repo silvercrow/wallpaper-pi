@@ -30,7 +30,7 @@ def printWallpaper():
     epd.init(epd.FULL_UPDATE)
     epd.Clear(0xFF)
     logging.info("reading image file...")
-    image = Image.open(os.path.join(wallpaperDir, 'fox.jpg'))
+    image = Image.open(os.path.join(wallpaperDir, wallpaper))
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     logging.info("Goto Sleep...")
